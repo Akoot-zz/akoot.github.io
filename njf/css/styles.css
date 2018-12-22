@@ -23,8 +23,6 @@ header {
 #main {
     color: #f9f9f9;
     font-family: "Karla", sans-serif;
-    /*background: linear-gradient(-63deg, #031D26, #0C0A26);*/
-    /*background: #fff;*/
     background-image: url("../img/city.jpeg");
     box-shadow: 0 1px 20px rgba(0, 0, 0, 0.5);
 }
@@ -48,6 +46,18 @@ footer {
     color: #c7c7c7;
     background: #000000;
     padding: 4em;
+}
+#footer-left, #footer-center, #footer-right {
+    margin: 1em;
+}
+#footer-left {
+    float: left;
+}
+#footer-center {
+    float: center;
+}
+#footer-right {
+    float: right;
 }
 
 .col {
