@@ -1,0 +1,155 @@
+/* Container */
+#container {
+    background: linear-gradient(-63deg, rgba(255, 255, 255, 0.91), rgba(255, 255, 255, 0.64));
+}
+
+/* Info */
+#info-container {
+    display: inline-block;
+    margin: 0.5em;
+}
+#info {
+    display: inline-block;
+    float: right;
+}
+#title {
+    background-color: rgba(255, 255, 255, 0.84);
+    color: #000;
+}
+#episode {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.67);
+}
+#episode, #title {
+    display: block;
+    float: left;
+    clear: left;
+    padding: .5em;
+    margin-bottom: .25em;
+    font-size: large;
+}
+
+/* Player */
+#player {
+    padding: 0.5em;
+}
+
+/* Controls */
+#controls {
+    display: inline-block;
+}
+#play-pause {
+    display: inline-block;
+    padding: 1.5em;
+    margin-right: .5em;
+    background: linear-gradient(-63deg, #002735, #190033);
+}
+#play-pause:hover {
+    opacity: 0.7;
+}
+
+#play, #pause {
+    font-size: 2em;
+}
+
+/* Time */
+#time-played, #time-remaining {
+    display: inline-block;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    color: #484848;
+    width: 2em;
+}
+
+/* Timeline */
+#timeline {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 1em;
+    height: 0.5em;
+    width: 90%;
+}
+#scrubber {
+    height: 0.5em;
+    width: 0.5em;
+    background: linear-gradient(-63deg, #005a7b, #36006e);
+    border-radius: 2em;
+}
+#scrubber:hover {
+    background: #000;
+}
+
+/* Actions */
+#actions {
+    padding: 0.5em;
+    background: linear-gradient(-63deg, rgba(255, 255, 255, 0.91), rgba(255, 255, 255, 0.64));
+}
+
+/* Buttons */
+#buttons {
+    display: block;
+    margin-top: 0.5em;
+}
+#download-button, #youtube-button {
+    display: inline-block;
+    color: #000;
+    padding: 0.5em;
+    font-size: small;
+}
+#youtube-button:hover {
+    color: #B40226;
+}
+#download-button:hover {
+    color: #02275B;
+}
+
+/* Search */
+#search-bar {
+    padding: 0.5em;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 2em;
+}
+#search-bar:focus {
+    background: #fff;
+}
+#search-text {
+    border: 0 none;
+    background: none;
+    color: #000;
+}
+#search-icon, #search-area, #clear-search {
+    display: inline-block;
+}
+#search-icon, #clear-search {
+    font-size: 1em;
+    color: #404040;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+}
+
+#search-icon:hover {
+    color: #02275B;
+}
+
+#clear-search:hover {
+    color: #B40226;
+}
+
+/* Playlist */
+#playlist {
+    height: 30em;
+    overflow: scroll
+}
+
+/* Episode */
+.episode {
+    color: #000;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1em;
+}
+.episode:hover {
+    color: #fff;
+    background: #000;
+}

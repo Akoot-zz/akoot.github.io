@@ -1,0 +1,79 @@
+/* All */
+body {
+    width: 100%;
+}
+
+/* Classes */
+.center-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+}
+
+/* Header */
+header {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* main */
+#main {
+    color: #f9f9f9;
+    font-family: "Karla", sans-serif;
+    /*background: linear-gradient(-63deg, #031D26, #0C0A26);*/
+    /*background: #fff;*/
+    background-image: url("../img/city.jpeg");
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* links */
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #B40226;
+}
+
+/* Footer */
+footer {
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.2);
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size: medium;
+    color: #c7c7c7;
+    background: #000000;
+    padding: 4em;
+}
+
+.col {
+    display: inline-block;
+}
+
+.row {
+    display: block;
+}
+
+.clickable {
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+/* Display */
+@media screen and (min-width: 1000px) {
+
+    #main {
+        padding: 4em 20em;
+    }
+}
+
+@media print {
+
+    body {
+        display: none;
+    }
+}
