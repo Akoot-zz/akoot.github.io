@@ -5,6 +5,8 @@ var playIcon = document.getElementById("play");
 var pauseIcon = document.getElementById("pause");
 var timeline = document.getElementById("timeline");
 var timePlayed = document.getElementById("time-played");
+var rewindButton = document.getElementById("rewind-button");
+var forwardButton = document.getElementById("forward-button");
 
 var duration;
 var timelineWidth = timeline.offsetWidth - scrubber.offsetWidth;
@@ -29,6 +31,22 @@ timeline.addEventListener("click", function (event) {
     moveScrubber(event);
     audio.currentTime = duration * clickPercent(event);
 }, false);
+
+rewindButton.onclick = function() {
+    audio.currentTime = audio.currentTime - getSkipTime();
+};
+
+forwardButton.onclick = function() {
+    audio.currentTime = audio.currentTime + getSkipTime();
+};
+
+function getSkipTime() {
+    var setTime = document.getElementById("time-text").value;
+    if(isNaN(setTime)) {
+        setTime = 10;
+    }
+    return parseInt(setTime);
+}
 
 function clickPercent(event) {
     return (event.clientX - getPosition(timeline)) / timelineWidth;
@@ -74,6 +92,7 @@ function timeUpdate() {
     var playPercent = timelineWidth * (audio.currentTime / duration);
     setScrubberWidth(playPercent);
     if (audio.currentTime === duration) {
+        setEpisode(currentEpisode + 1)
         pause(false);
     }
     timePlayed.innerText = getTime(audio.currentTime);

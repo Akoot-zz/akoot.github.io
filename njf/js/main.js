@@ -18,7 +18,6 @@ clearSearch.onclick = function() {
 input.addEventListener('input', search);
 
 $.getJSON("episodes.json", function(json) {
-// $.getJSON("https://api.myjson.com/bins/xjra8", function(json) {
     episodes = json.sort(function(a, b) {
         return parseFloat(a.episode) - parseFloat(b.episode);
     });
@@ -28,6 +27,11 @@ $.getJSON("episodes.json", function(json) {
     loadEpisode();
     audio.pause();
 });
+
+function setEpisode(number) {
+	currentEpisode = number;
+	loadEpisode();
+}
 
 function displayEpisode(episode) {
 	var container = document.createElement("div");
