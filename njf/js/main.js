@@ -71,8 +71,13 @@ function loadEpisode() {
 	audio.currentTime = episode.start;
 	audio.play();
 
-	document.getElementById("title").innerText = episode.title;
-	document.getElementById("episode").innerText = "Episode " + episode.episode;
+	var titleElement = document.getElementById("title");
+	var episodeElement = document.getElementById("episode");
+
+	titleElement.innerText = episode.title;
+	episodeElement.innerText = "Episode " + episode.episode;
+	episodeElement.title = episode.date;
+
 	document.getElementById("youtube-button").onclick = function() {
 		window.open("http://youtu.be/" + episode.id + "?t=" + episode.start);
 	};
