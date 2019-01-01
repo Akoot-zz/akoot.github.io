@@ -17,7 +17,7 @@ clearSearch.onclick = function() {
 
 input.addEventListener('input', search);
 
-$.getJSON("episodes.json", function(json) {
+$.getJSON("Updater/episodes.json", function (json) {
     episodes = json.sort(function(a, b) {
         return parseFloat(a.episode) - parseFloat(b.episode);
     });
