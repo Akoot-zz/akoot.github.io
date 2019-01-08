@@ -10,6 +10,13 @@ var clearSearch = document.getElementById("clear-search");
 
 var mediaFolder = "https://filedn.com/lHHBHWtAlOt5syqI4onfcmB/NJF/media/";
 
+var monthNames = [
+	"January", "February", "March",
+	"April", "May", "June", "July",
+	"August", "September", "October",
+	"November", "December"
+];
+
 clearSearch.onclick = function() {
 	input.value = "";
 	search();
@@ -17,7 +24,7 @@ clearSearch.onclick = function() {
 
 input.addEventListener('input', search);
 
-$.getJSON("Updater/episodes.json", function (json) {
+$.getJSON("episodes.json", function (json) {
     episodes = json.sort(function(a, b) {
         return parseFloat(a.episode) - parseFloat(b.episode);
     });
@@ -74,9 +81,11 @@ function loadEpisode() {
 	var titleElement = document.getElementById("title");
 	var episodeElement = document.getElementById("episode");
 
+	var date = new Date(episode.date);
+
 	titleElement.innerText = episode.title;
 	episodeElement.innerText = "Episode " + episode.episode;
-	episodeElement.title = episode.date;
+	episodeElement.title = monthNames[date.getMonth()] + ' ' + date.getDay() + ', ' + date.getFullYear();
 
 	document.getElementById("youtube-button").onclick = function() {
 		window.open("http://youtu.be/" + episode.id + "?t=" + episode.start);

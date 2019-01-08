@@ -1,1 +1,0 @@
-java -jar "Updater.jar" "~/pCloudDrive/Public Folder/NJF/media"
