@@ -2,3 +2,5 @@
 .idea
 akoot.github.io.iml
 njf/njf-updater.jar
+njf/*.sh
+njf/*.bat
