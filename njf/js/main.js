@@ -47,6 +47,9 @@ function displayEpisode(episode) {
 	container.onclick = function() {
 		currentEpisode = episodes.indexOf(episode);
 		loadEpisode();
+        if (audio.paused) {
+            audio.play();
+        }
 	};
 
 	playlist.appendChild(container);
@@ -72,11 +75,17 @@ function search() {
 	}
 }
 
-function loadEpisode() {
+function loadEpisode(time) {
+    var isHD = document.getElementById("hd-switch").checked;
 	var episode = episodes[currentEpisode];
-	audio.setAttribute("src", mediaFolder + episode.src);
-	audio.currentTime = episode.start;
-	audio.play();
+    var src = isHD ? episode.src : episode.src.substring(0, episode.src.indexOf(".")) + ".mp3";
+
+    if (!time) {
+        time = episode.start;
+    }
+
+    audio.setAttribute("src", mediaFolder + src);
+    audio.currentTime = time;
 
 	var titleElement = document.getElementById("title");
 	var episodeElement = document.getElementById("episode");
@@ -91,6 +100,18 @@ function loadEpisode() {
 		window.open("http://youtu.be/" + episode.id + "?t=" + episode.start);
 	};
 	document.getElementById("download-button").onclick = function() {
-		window.open(mediaFolder + episode.src);
-	};
+        window.open(mediaFolder + src);
+    };
+    document.getElementById("hd-toggle").onclick = function () {
+        var wasPlaying = !audio.paused;
+        loadEpisode(audio.currentTime);
+        if (wasPlaying) {
+            audio.play();
+        }
+        if (!isHD) {
+            document.getElementById("hd-toggle-label").style.color = "#237b91";
+        } else {
+            document.getElementById("hd-toggle-label").style.color = "#000";
+        }
+    }
 }

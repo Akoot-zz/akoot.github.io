@@ -1,6 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea
 akoot.github.io.iml
-njf/njf-updater.jar
-njf/*.sh
-njf/*.bat
+/njf/njf-updater.jar
+/njf/*.sh
+/njf/*.bat
+/njf/api.key

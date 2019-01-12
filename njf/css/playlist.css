@@ -36,7 +36,7 @@
 
 /* Controls */
 #controls {
-    display: inline-block;
+    margin-left: 1em;
 }
 #play-pause {
     display: inline-block;
@@ -100,12 +100,7 @@
 #forward-button:hover, #rewind-button:hover {
     color: #DE7234;
 }
-#youtube-button:hover {
-    color: #B40226;
-}
-#download-button:hover {
-    color: #008BB9;
-}
+
 #time-text {
     width: 2em;
     text-align: center;
@@ -113,8 +108,20 @@
     color: #000;
     border: none;
 }
+
 #time-text:hover {
     color: #DE7234;
+}
+#youtube-button:hover {
+    color: #B40226;
+}
+#download-button:hover {
+    color: #008BB9;
+}
+
+/* HD toggler */
+#hd-toggle-label {
+    color: #237b91;
 }
 
 /* Search */
@@ -161,6 +168,10 @@
     color: #000;
     background: rgba(255, 255, 255, 0.9);
     padding: 1em;
+}
+
+.unavailable {
+    background: rgba(149, 8, 23, 0.9);
 }
 .episode:hover {
     color: #fff;

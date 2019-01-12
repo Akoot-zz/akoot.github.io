@@ -36,7 +36,13 @@
             </div>
         </div>
 
+        <div class="row" id="controls">
+
+
+        </div>
+
         <div id="player">
+
             <div id="time-played">--:--</div>
             <audio id="audio"></audio>
             <div id="timeline" class="clickable">
@@ -44,13 +50,22 @@
             </div>
             <div id="time-remaining">--:--</div>
             <div id="buttons">
+                <div class="col">
+                    <label class="switch" id="hd-toggle">
+                        <input id="hd-switch" name="hdswitch" type="checkbox">
+                        <span class="switch-slider clickable"></span>
+                    </label>
+                    <span class="clickable" id="hd-toggle-label">HD</span>
+                </div>
                 <div id="download-button" class="clickable"><i class="fas fa-arrow-alt-circle-down"></i> Download</div>
                 <div id="youtube-button" class="clickable"><i class="fab fa-youtube"></i> Video</div>
-                <div id="rewind-button" class="clickable"><i class="fas fa-backward"></i></div>
-                <label id="time-area">
-                    <input id="time-text" class="clickable" type="text" placeholder="Seconds" value="10">
-                </label>
-                <div id="forward-button" class="clickable"><i class="fas fa-forward"></i></div>
+                <div class="col">
+                    <div class="clickable" id="rewind-button"><i class="fas fa-backward"></i></div>
+                    <label id="time-area">
+                        <input class="clickable" id="time-text" placeholder="Seconds" type="text" value="10">
+                    </label>
+                    <div class="clickable" id="forward-button"><i class="fas fa-forward"></i></div>
+                </div>
             </div>
         </div>
 
