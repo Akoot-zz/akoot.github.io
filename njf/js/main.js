@@ -78,7 +78,7 @@ function search() {
 function loadEpisode(time) {
     var isHD = document.getElementById("hd-switch").checked;
 	var episode = episodes[currentEpisode];
-    var src = isHD ? episode.src : episode.src.substring(0, episode.src.indexOf(".")) + ".mp3";
+	var src = isHD ? episode.src : episode.src.substring(0, episode.src.lastIndexOf(".")) + ".mp3";
 
     if (!time) {
         time = episode.start;
