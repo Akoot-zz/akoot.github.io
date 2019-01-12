@@ -96,22 +96,24 @@ function loadEpisode(time) {
 	episodeElement.innerText = "Episode " + episode.episode;
 	episodeElement.title = monthNames[date.getMonth()] + ' ' + date.getDay() + ', ' + date.getFullYear();
 
+    if (isHD) {
+        document.getElementById("hd-toggle-label").style.color = "#237b91";
+    } else {
+        document.getElementById("hd-toggle-label").style.color = "#000";
+    }
+
 	document.getElementById("youtube-button").onclick = function() {
 		window.open("http://youtu.be/" + episode.id + "?t=" + episode.start);
 	};
 	document.getElementById("download-button").onclick = function() {
         window.open(mediaFolder + src);
     };
+
     document.getElementById("hd-toggle").onclick = function () {
         var wasPlaying = !audio.paused;
         loadEpisode(audio.currentTime);
         if (wasPlaying) {
             audio.play();
-        }
-        if (!isHD) {
-            document.getElementById("hd-toggle-label").style.color = "#237b91";
-        } else {
-            document.getElementById("hd-toggle-label").style.color = "#000";
         }
     }
 }
