@@ -73,11 +73,8 @@
 #scrubber {
     height: 0.5em;
     width: 0.5em;
-    background: linear-gradient(-63deg, #005a7b, #36006e);
+    background: #190033;
     border-radius: 2em;
-}
-#scrubber:hover {
-    background: #000;
 }
 
 /* Actions */
@@ -117,11 +114,6 @@
 }
 #download-button:hover {
     color: #008BB9;
-}
-
-/* HD toggler */
-#hd-toggle-label {
-    color: #237b91;
 }
 
 /* Search */
@@ -175,5 +167,5 @@
 }
 .episode:hover {
     color: #fff;
-    background: #000;
+    background: #282437;
 }
