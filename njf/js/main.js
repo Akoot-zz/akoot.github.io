@@ -51,6 +51,8 @@ $.getJSON("episodes.json", function (json) {
     setEpisode(episodes[cookies.lastEpisode], cookies.lastTime);
     audio.pause();
     setHD(cookies.hd);
+
+	playlistElement.scrollTo(0, playlistElement.scrollHeight);
 });
 
 // On unload
