@@ -1,0 +1,72 @@
+body {
+    --accent-color-1: #51a5ff;
+    --accent-color-2: #90bdc0;
+    --accent-color-3: #c592ee;
+}
+
+a {
+    color: var(--accent-color-2);
+}
+
+a:hover {
+    color: var(--accent-color-1);
+}
+
+#header {
+    /*background-color: #000;*/
+    padding-top: 3em;
+}
+
+.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#logo {
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-image: url("../img/fox/0.png");
+}
+
+#name {
+    color: #4b4b4b;
+}
+
+footer {
+    background-color: #252525;
+    color: #c9c9c9;
+    padding: 1em;
+}
+
+footer i {
+    font-size: x-large;
+    margin-left: .5em;
+    margin-right: .5em;
+}
+
+footer a {
+    color: #575757;
+}
+
+footer a:hover {
+    color: var(--accent-color-2);
+    text-decoration: none;
+}
+
+#footer {
+    /*background-color: #ff0000;*/
+}
+
+#footer .row {
+    display: block;
+    margin: .5em auto;
+}
+
+blockquote {
+    color: #7f7f7f;
+    font-style: italic;
+}
