@@ -37,6 +37,7 @@ a:hover {
     width: 200px;
     height: 200px;
     background-image: url("../img/fox/0.png");
+    cursor: pointer;
 }
 
 #name {
