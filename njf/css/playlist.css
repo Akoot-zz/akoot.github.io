@@ -1,7 +1,6 @@
 /* Container */
 #container {
     background: linear-gradient(-63deg, rgba(255, 255, 255, 0.91), rgba(255, 255, 255, 0.64));
-    border-radius: .5em;
 }
 
 /* Info */
@@ -44,7 +43,6 @@
     padding: 1.5em;
     margin-right: .5em;
     background: linear-gradient(-63deg, #002735, #190033);
-    border-radius: .5em;
 }
 #play-pause:hover {
     opacity: 0.7;
@@ -68,13 +66,15 @@
 #timeline {
     display: inline-block;
     background: rgba(0, 0, 0, 0.2);
-    height: 2em;
+    border-radius: 1em;
+    height: 0.5em;
     width: 90%;
 }
 #scrubber {
-    height: 2em;
-    width: 0em;
+    height: 0.5em;
+    width: 0.5em;
     background: #190033;
+    border-radius: 2em;
 }
 
 /* Actions */
